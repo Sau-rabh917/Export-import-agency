@@ -15,6 +15,12 @@
     <header class="bg-blue-900 shadow-md  sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center h-32">
             <img class="w-40" src="sapan.jpg" alt="">
+             <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
             <nav class="space-x-6 hidden md:block text-lg font-bold text-white">
                 <a href="indx.html" class="hover:text-lime-300">Home</a>
                 <a href="#about" class="hover:text-lime-300">About</a>
@@ -24,6 +30,16 @@
               </nav>
               <a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</a>
             </div>
+        <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden space-y-4 bg-blue-900 p-4 text-center">
+      <a href="indx.html" class="block text-white">Home</a>
+      <a href="#about" class="block text-white">About</a>
+      <a href="services.html" class="block text-white">Services</a>
+      <a href="contact.html" class="block text-white">Contact</a>
+      <a href="gallery.html" class="block text-white">Gallery</a>
+    </div>
+        
+        
     </header>
     <section>
 
@@ -76,6 +92,14 @@
         <footer class="bg-gray-800 text-white py-6 text-center">
             <p>&copy; Sapan Clearing And Forwarding Agency All rights reserved.</p>
         </footer>
+         <script>
+    // Mobile menu toggle
+    document.getElementById("hamburger-btn").addEventListener("click", function() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+        
 
 </body>
 
